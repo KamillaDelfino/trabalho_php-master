@@ -1,0 +1,186 @@
+/*Importando a fonte do Google - ROBOTO*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: #DCDCDC;
+}
+
+li, a {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 800;
+    font-size: 16px;
+    color: #302c7c;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+
+}
+
+img{
+    height: 10%;
+ width: 10%;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav_links {
+ list-style: none;
+}
+
+.nav_links li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+footer{
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    position: absolute;
+    bottom: 0;
+    padding: 30px 10%;
+    background-color: #302c7c;
+}
+.footer_links  li  {
+    display: inline-block;
+    padding: 0px 100px;
+}
+.footer_links  li  a {
+    color: #DCDCDC;
+}
+
+.sub_menu {
+    list-style: none;
+}
+
+.sub_menu li {
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+h1 {
+    color:#302c7c;
+}
+
+.error{
+    color:#302c7c;
+    text-align: center;
+    font-size: 100px;
+}
+
+table, th, td {
+  border: 1px solid #020210;
+  padding: 10px;
+  background-color: #9292fb;
+}
+
+th{
+  background-color: #302c7c;
+}
+
+th:last-child{
+    background-color: #fb1e1e;
+}
+th:nth-last-child(2){
+    background-color: #ffbe0a;
+}
+
+td{
+    background-color: #635eb4;
+}
+td:nth-last-child(2){
+    background-color: #efce74;
+}
+td:last-child{
+    background-color: #fd6e5e
+}
+  
+table {
+  position: relative;
+  color:white;
+  left: 20%;
+  width: 50%;
+}
+
+.cadastrar{
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+}
+
+.cadastrar form{
+    display: flex;
+    flex-direction: column;
+    background-color: #8c88d5;
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+}
+.cadastrar input{
+    height: 40px;
+    margin: 10px;
+    border: none;
+    padding: 20px;
+    border-radius: 10px;
+}
+button{
+    background-color: #302c7c;
+    width: 40%;
+    align-self: end;
+    color: white;
+    border:none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s ease;
+}
+
+button:hover{
+    background-color: #131134;
+}
+
+label{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 300;
+}
+
+td input{
+    background-color: transparent;
+    border:none;
+}
+
+.title{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    font-size: 30px;
+    text-shadow: 4px 2px 5px #cac7ff;
+    padding-bottom: 16px;
+}
+
+#erro_crud {
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+   margin-top: 30px;
+}
+
+#erro_crud p {
+    color: red;
+    font-size: 1.5rem;
+    text-transform: uppercase; 
+}

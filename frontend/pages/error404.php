@@ -1,0 +1,1 @@
+<p class="error">Página 404</p>
