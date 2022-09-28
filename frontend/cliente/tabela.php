@@ -1,5 +1,5 @@
 <?php 
-require_once("./backend/cliente/list.php");
+  require_once("./backend/cliente/list.php");
 ?>
 <table>
   <tr>
