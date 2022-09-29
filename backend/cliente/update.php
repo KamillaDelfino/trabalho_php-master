@@ -10,16 +10,20 @@ $telefone = $_POST['telefone'];
 
 $erro = "";
 
-try{
+if ($nome!= "" && $sobrenome!= "" && $telefone!="" && $email!=""){    
+   try{
         conectaBD()->exec('UPDATE cliente SET nome="'.$nome.'",
                 email="'.$email.'",
                 sobrenome="'.$sobrenome.'",
                 telefone="'.$telefone.'" WHERE id="'.$id.'"');
-} catch (Exception $e){
-        $erro = "&erro=Erro: " . $e->getMessage();
-}
+   } catch (Exception $e){
+           $erro = "&erro=Erro: " . $e->getMessage();
+   }
+   //volta para a página do cliente 
+   header("Location:/trabalho_php-master/?p=cliente{$erro}");
 
-//volta para a página do cliente 
-header("Location:/trabalho_php-master/?p=cliente{$erro}");
+}else{
+    echo "Campos não preenchidos! Favor preencher!";
+}
 
 ?>

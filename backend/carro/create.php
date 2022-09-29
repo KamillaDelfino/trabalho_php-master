@@ -9,17 +9,16 @@ $modelo = $_POST['modelo'];
 
 $erro = "";
 
-try {
-    if(isset($marca) && isset($cor) && isset($placa) && isset($modelo)){
-        $array = array($marca, $cor, $placa,$modelo);
-        $sql = conectaBD()->prepare("INSERT INTO carro VALUES (null, ?, ?, ?, ?)");
-        $sql -> execute(array_values($array));
+    if($marca != "" && $cor != "" && $modelo != "" && $placa != "" ){
+        try {
+            $array = array($marca, $cor, $placa,$modelo);
+            $sql = conectaBD()->prepare("INSERT INTO carro VALUES (null, ?, ?, ?, ?)");
+            $sql -> execute(array_values($array));
+        } catch (Exception $e) {
+            $erro = "&erro=Erro: " . $e->getMessage();
+        }
+        header("Location:/trabalho_php-master/?p=carro{$erro}");
+    }else{
+        echo "Campos não preenchidos! Favor preencher!";
     }
-} catch (Exception $e) {
-    $erro = "&erro=Erro: " . $e->getMessage();
-}
-
-//volta para a página do carro 
-header("Location:/trabalho_php-master/?p=carro{$erro}");
-
 ?>

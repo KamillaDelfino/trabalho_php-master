@@ -10,16 +10,20 @@ $setor = $_POST['setor'];
 
 $erro = "";
 
-try{
-        conectaBD()->exec('UPDATE funcionario SET nome="'.$nome.'",
-                setor="'.$setor.'",
-                sobrenome="'.$sobrenome.'",
-                telefone="'.$telefone.'" WHERE id="'.$id.'"');
-} catch (Exception $e){
-        $erro = "&erro=Erro: " . $e->getMessage();
-}
+if ($nome != "" && $sobrenome != "" && $telefone != "" && $setor != ""){
+        try{
+                conectaBD()->exec('UPDATE funcionario SET nome="'.$nome.'",
+                        setor="'.$setor.'",
+                        sobrenome="'.$sobrenome.'",
+                        telefone="'.$telefone.'" WHERE id="'.$id.'"');
+        } catch (Exception $e){
+                $erro = "&erro=Erro: " . $e->getMessage();
+        }
+        //volta para a página do cliente 
+        header("Location:/trabalho_php-master/?p=funcionario{$erro}");  
 
-//volta para a página do cliente 
-header("Location:/trabalho_php-master/?p=funcionario{$erro}");
+        }else{
+                echo "Campos não preenchidos! Favor preencher!";
+        }
 
 ?>

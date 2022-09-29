@@ -14,6 +14,6 @@ try{
     $erro = "&erro=Erro: " . $e->getMessage();
 }
 
-// header("Location:/trabalho_php-master/?p=funcionario{$erro}");
+header("Location:/trabalho_php-master/?p=funcionario{$erro}");
 
 ?>
