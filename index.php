@@ -1,3 +1,5 @@
+//Kamilla Catholico Delfino
+
 <?php
 	require("./frontend/functions.php");
 ?>

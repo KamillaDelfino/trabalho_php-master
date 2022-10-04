@@ -27,4 +27,14 @@
 <?php
   if (isset($_GET["erro"]))
     echo '<div id="erro_crud"><p>'.$_GET['erro'].'</p></div>';
+
+  if (isset($_GET["confirma"])){
+    echo '<div class="popup">
+            <h4>Confirma esta exclusão?</h4>
+            <div class="group-delete">
+              <a href="?p=carro&action=delete&del=' . $_GET["confirma"] . '&confirmacao=1">Sim</a>
+              <a href="?p=carro">Não</a>
+            </div>
+          </div>';
+  }
 ?>
